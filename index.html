@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOT Global PTY LTD | BI & Data Excellence</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-red: #D93025; 
+            --dark-grey: #202124;
+            --slate: #3C4043;
+            --light-bg: #F8F9FA;
+            --white: #ffffff;
+        }
+
+        body { font-family: 'Inter', sans-serif; margin: 0; background-color: var(--light-bg); color: var(--dark-grey); }
+
+        nav { padding: 1.5rem 10%; background: var(--white); display: flex; justify-content: center; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        .logo-container img { max-height: 80px; width: auto; mix-blend-mode: multiply; }
+
+        header { padding: 6rem 10%; text-align: center; background: linear-gradient(180deg, var(--white) 0%, var(--light-bg) 100%); }
+        h1 { font-size: 3rem; font-weight: 700; margin-bottom: 1.5rem; }
+        h1 span { color: var(--primary-red); }
+        .tagline { font-size: 1.25rem; color: var(--slate); max-width: 800px; margin: 0 auto 2.5rem; }
+
+        .btn {
+            background-color: var(--primary-red); color: white; padding: 1.2rem 2.5rem;
+            text-decoration: none; border-radius: 6px; font-weight: 600; cursor: pointer;
+            border: none; transition: transform 0.2s; display: inline-block;
+        }
+        .btn:hover { transform: scale(1.03); background: #b7281e; }
+
+        /* MODAL */
+        .modal {
+            display: none; position: fixed; z-index: 1000; left: 0; top: 0; 
+            width: 100%; height: 100%; background-color: rgba(0,0,0,0.6); backdrop-filter: blur(5px);
+        }
+        .modal-content {
+            background-color: var(--white); margin: 5% auto; padding: 2.5rem;
+            border-radius: 12px; width: 90%; max-width: 450px; position: relative;
+        }
+        .close-btn { position: absolute; right: 20px; top: 15px; font-size: 28px; cursor: pointer; }
+
+        /* FORM */
+        form { display: flex; flex-direction: column; gap: 0.8rem; text-align: left; }
+        label { font-weight: 600; font-size: 0.85rem; color: var(--slate); }
+        input, textarea { padding: 0.7rem; border: 1px solid #ddd; border-radius: 4px; font-family: inherit; }
+        input:focus { border-color: var(--primary-red); outline: none; }
+        
+        .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; padding: 4rem 10%; }
+        .card { background: var(--white); padding: 2rem; border-radius: 8px; border-top: 4px solid var(--primary-red); box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo-container">
+            <img src="logo.png" alt="TOT Global PTY LTD">
+        </div>
+    </nav>
+
+    <header>
+        <h1>Intelligence Driven by <span>Data</span></h1>
+        <p class="tagline">Providing Enterprise Data Warehousing and BI solutions for Brisbane's growing business sector.</p>
+        <button class="btn" onclick="openModal()">Schedule a Consultation</button>
+    </header>
+
+    <div class="services">
+        <div class="card"><h3>Data Warehousing</h3><p>Cloud-native storage (BigQuery/Snowflake) for your single source of truth.</p></div>
+        <div class="card"><h3>BI Dashboards</h3><p>Real-time visual analytics for Directors to track KPIs and growth metrics.</p></div>
+        <div class="card"><h3>Data Pipelines</h3><p>Automated ETL processes to ensure data integrity across the organization.</p></div>
+    </div>
+
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2 style="margin-top:0">Consultation Request</h2>
+            
+            <form action="https://formspree.io/f/australiavasanth@gmail.com" method="POST">
+                <label>First Name</label>
+                <input type="text" name="FirstName" placeholder="Your first name" required>
+                
+                <label>Last Name</label>
+                <input type="text" name="LastName" placeholder="Your last name" required>
+                
+                <label>Contact Number</label>
+                <input type="tel" name="Phone" placeholder="04XX XXX XXX" required>
+                
+                <label>Email Address</label>
+                <input type="email" name="_replyto" placeholder="email@domain.com" required>
+                
+                <label>Enquiry Details</label>
+                <textarea name="Message" rows="4" placeholder="Briefly describe your project requirements..." required></textarea>
+                
+                <input type="hidden" name="_subject" value="New TOT Global Consultation Request!">
+                
+                <button type="submit" class="btn" style="margin-top:1rem;">Submit to Director</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function openModal() { document.getElementById("contactModal").style.display = "block"; }
+        function closeModal() { document.getElementById("contactModal").style.display = "none"; }
+        window.onclick = function(event) {
+            let modal = document.getElementById("contactModal");
+            if (event.target == modal) { modal.style.display = "none"; }
+        }
+    </script>
+
+</body>
+</html>
