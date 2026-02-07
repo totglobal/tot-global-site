@@ -16,28 +16,32 @@
 
         body { font-family: 'Inter', sans-serif; margin: 0; background-color: var(--light-bg); color: var(--dark-grey); }
 
-       /* nav { padding: 1.5rem 10%; background: var(--white); display: flex; justify-content: center; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }*/
-         nav { 
-            padding: 1in 10% 0.5rem 10%; /* Very small top padding (0.2in) */
+       nav { 
+            padding: 0; /* Completely removes top/bottom space in nav */
             background: var(--white); 
             display: flex; 
             justify-content: center; 
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         }
+
         .logo-container img { 
-            height: 6in; /* Sets it to exactly your requested size */
+            height: 2in; 
             width: auto; 
-            mix-blend-mode: multiply; 
             display: block;
-            margin: 0 auto;
+            margin: 0; /* Removes all space around the logo image */
+            mix-blend-mode: multiply;
         }
-      /*  header { padding: 6rem 10%; text-align: center; background: linear-gradient(180deg, var(--white) 0%, var(--light-bg) 100%); } */
+
         header { 
-            padding: 1in 10% 3rem 10%; /* Top padding set to 1 inch */
+            padding: 1in 10% 3rem 10%; /* Forces exactly 1 inch above the text */
             text-align: center; 
-            background: linear-gradient(180deg, var(--white) 0%, var(--light-bg) 100%); 
+            background: linear-gradient(180deg, var(--white) 0%, var(--light-bg) 100%);
         }
-        h1 { font-size: 3rem; font-weight: 700; margin-bottom: 1.5rem; }
+
+        h1 { 
+            font-size: 3rem; 
+            font-weight: 700; 
+            margin: 0 0 1.5rem 0; /* The first '0' kills the gap above the headline */
+        }
         h1 span { color: var(--primary-red); }
         .tagline { font-size: 1.25rem; color: var(--slate); max-width: 800px; margin: 0 auto 2.5rem; }
 
@@ -129,6 +133,7 @@
 </body>
 
 </html>
+
 
 
 
