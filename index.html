@@ -3,152 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TOT Global PTY LTD</title>
-    <link rel="icon" type="image/png" href="favicon.png?v=2">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>TOT GLOBAL | Intelligence Driven by Data</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root {
-            --primary-red: #D93025; 
-            --dark-grey: #202124;
-            --slate: #3C4043;
-            --light-bg: #F8F9FA;
-            --white: #ffffff;
-        }
-
-        body { font-family: 'Inter', sans-serif; margin: 0; background-color: var(--light-bg); color: var(--dark-grey); }
-
-       nav { 
-            padding: 0; /* Completely removes top/bottom space in nav */
-            background: var(--white); 
-            display: flex; 
-            justify-content: center; 
-        }
-
-        .logo-container img { 
-            height: 2in; 
-            width: auto; 
-            display: block;
-            margin: 0; /* Removes all space around the logo image */
-            mix-blend-mode: multiply;
-        }
-
-        header { 
-            padding: 1in 10% 3rem 10%; /* Forces exactly 1 inch above the text */
-            text-align: center; 
-            background: linear-gradient(180deg, var(--white) 0%, var(--light-bg) 100%);
-        }
-
-        h1 { 
-            font-size: 3rem; 
-            font-weight: 700; 
-            margin: 0 0 1.5rem 0; /* The first '0' kills the gap above the headline */
-        }
-        h1 span { color: var(--primary-red); }
-        .tagline { font-size: 1.25rem; color: var(--slate); max-width: 800px; margin: 0 auto 2.5rem; }
-
-        .btn {
-            background-color: var(--primary-red); color: white; padding: 1.2rem 2.5rem;
-            text-decoration: none; border-radius: 6px; font-weight: 600; cursor: pointer;
-            border: none; transition: transform 0.2s; display: inline-block;
-        }
-        .btn:hover { transform: scale(1.03); background: #b7281e; }
-
-        /* MODAL */
-        .modal {
-            display: none; position: fixed; z-index: 1000; left: 0; top: 0; 
-            width: 100%; height: 100%; background-color: rgba(0,0,0,0.6); backdrop-filter: blur(5px);
-        }
-        .modal-content {
-            background-color: var(--white); margin: 5% auto; padding: 2.5rem;
-            border-radius: 12px; width: 90%; max-width: 450px; position: relative;
-        }
-        .close-btn { position: absolute; right: 20px; top: 15px; font-size: 28px; cursor: pointer; }
-
-        /* FORM */
-        form { display: flex; flex-direction: column; gap: 0.8rem; text-align: left; }
-        label { font-weight: 600; font-size: 0.85rem; color: var(--slate); }
-        input, textarea { padding: 0.7rem; border: 1px solid #ddd; border-radius: 4px; font-family: inherit; }
-        input:focus { border-color: var(--primary-red); outline: none; }
-        
-        .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; padding: 4rem 10%; }
-        .card { background: var(--white); padding: 2rem; border-radius: 8px; border-top: 4px solid var(--primary-red); box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
+        .gradient-text { background: linear-gradient(90deg, #3b82f6, #60a5fa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .case-card:hover { transform: translateY(-5px); transition: all 0.3s ease; border-color: #3b82f6; }
+        /* Smooth scrolling for navigation */
+        html { scroll-behavior: smooth; }
     </style>
 </head>
-<body>
+<body class="bg-slate-900 text-white font-sans">
 
-    <nav>
-        <div class="logo-container">
-            <img src="TOT_GLOBAL_Technologies.png" alt="TOT Global PTY LTD">
+    <nav class="flex justify-between items-center p-4 md:p-6 bg-slate-900/80 backdrop-blur-md sticky top-0 z-50 border-b border-slate-800">
+        <div class="flex items-center space-x-3">
+            <img src="logo.jpg" alt="TOT GLOBAL Logo" class="h-10 w-10 rounded-full border border-blue-500/50">
+            <div class="text-xl md:text-2xl font-bold tracking-tighter uppercase">TOT<span class="text-blue-500">GLOBAL</span></div>
+        </div>
+        <div class="space-x-8 hidden md:flex text-sm uppercase tracking-widest font-medium">
+            <a href="#solutions" class="hover:text-blue-400 transition">Solutions</a>
+            <a href="#expertise" class="hover:text-blue-400 transition">Expertise</a>
+            <a href="#contact" class="px-5 py-2 bg-blue-600 rounded-full hover:bg-blue-700 transition shadow-lg shadow-blue-900/20">Get Started</a>
         </div>
     </nav>
 
-    <header>
-        <h1>Intelligence Driven by <span>Data</span></h1>
-        <p class="tagline">Providing Enterprise Data Warehousing and BI solutions for Australia's growing business sector.</p>
-        <button class="btn" onclick="openModal()">Schedule a Consultation</button>
+    <header class="py-20 md:py-32 px-6 text-center max-w-4xl mx-auto">
+        <div class="mb-8 flex justify-center">
+            <div class="p-1 rounded-full bg-gradient-to-b from-blue-500 to-transparent">
+                <img src="logo.jpg" alt="TOT GLOBAL Icon" class="h-16 w-16 rounded-full shadow-2xl">
+            </div>
+        </div>
+        <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">Empowering Decisions with <span class="gradient-text">Advanced BI</span></h1>
+        <p class="text-slate-400 text-xl mb-10 leading-relaxed">We transform fragmented silos into unified enterprise intelligence. Trusted by Government, Healthcare, and Finance leaders across ANZ.</p>
     </header>
 
-    <div class="services">
-        <div class="card"><h3>Data Warehousing</h3><p>Cloud-native storage (Azure / Snowflake) and On-premises (SQL Server / Oracle / Clouders) for your single source of truth.</p></div>
-        <div class="card"><h3>BI Dashboards</h3><p>Real-time visual analytics for Directors to track KPIs and growth metrics.</p></div>
-        <div class="card"><h3>Data Pipelines</h3><p>Automated ETL processes to ensure data integrity across the organization.</p></div>
-    </div>
-
-    <div id="contactModal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn" onclick="closeModal()">&times;</span>
-            <h2 style="margin-top:0">Consultation Request</h2>
+    <section id="solutions" class="py-20 bg-slate-800/50">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="mb-16 text-center">
+                <h2 class="text-3xl font-bold mb-4">Enterprise Data Solutions</h2>
+                <p class="text-slate-400 italic">Proven frameworks delivered for complex multi-national environments.</p>
+            </div>
             
-            <form action="https://formspree.io/f/xkovnzwq" method="POST">
-                <label>First Name</label>
-                <input type="text" name="FirstName" placeholder="Your first name" required>
-                
-                <label>Last Name</label>
-                <input type="text" name="LastName" placeholder="Your last name" required>
-                
-                <label>Contact Number</label>
-                <input type="tel" name="Phone" placeholder="04XX XXX XXX" required>
-                
-                <label>Email Address</label>
-                <input type="email" name="_replyto" placeholder="email@domain.com" required>
-                
-                <label>Enquiry Details</label>
-                <textarea name="Message" rows="4" placeholder="Briefly describe your project requirements..." required></textarea>
-                
-                <input type="hidden" name="_subject" value="New TOT Global Consultation Request!">
-                
-                <button type="submit" class="btn" style="margin-top:1rem;">Submit</button>
-            </form>
-        </div>
-    </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-8 bg-slate-900 rounded-2xl border border-slate-700 case-card shadow-xl">
+                    <i class="fas fa-gavel text-blue-500 text-3xl mb-6"></i>
+                    <h3 class="text-xl font-bold mb-3">Justice & Government</h3>
+                    <p class="text-slate-400 text-sm mb-4 leading-relaxed">Implemented automated reporting for the Ministry of Justice, improving operational efficiency by 12% across 100+ pipelines. Seamlessly automated legacy SAS-to-Power BI migrations with zero data loss.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-[10px] bg-slate-800 border border-slate-700 px-2 py-1 rounded">Power BI</span>
+                        <span class="text-[10px] bg-slate-800 border border-slate-700 px-2 py-1 rounded">Oracle ODI</span>
+                    </div>
+                </div>
 
-    <script>
-        function openModal() { document.getElementById("contactModal").style.display = "block"; }
-        function closeModal() { document.getElementById("contactModal").style.display = "none"; }
-        window.onclick = function(event) {
-            let modal = document.getElementById("contactModal");
-            if (event.target == modal) { modal.style.display = "none"; }
-        }
-    </script>
+                <div class="p-8 bg-slate-900 rounded-2xl border border-slate-700 case-card shadow-xl">
+                    <i class="fas fa-heartbeat text-red-500 text-3xl mb-6"></i>
+                    <h3 class="text-xl font-bold mb-3">Healthcare Analytics</h3>
+                    <p class="text-slate-400 text-sm mb-4 leading-relaxed">Optimized "Cost of Care" metrics for major providers, identifying $2M+ in annual growth opportunities via real-time workforce heatmaps and clinical throughput analysis.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-[10px] bg-slate-800 border border-slate-700 px-2 py-1 rounded">Azure Databricks</span>
+                        <span class="text-[10px] bg-slate-800 border border-slate-700 px-2 py-1 rounded">Medallion Architecture</span>
+                    </div>
+                </div>
+
+                <div class="p-8 bg-slate-900 rounded-2xl border border-slate-700 case-card shadow-xl">
+                    <i class="fas fa-university text-emerald-500 text-3xl mb-6"></i>
+                    <h3 class="text-xl font-bold mb-3 text-emerald-500">Tier-1 Banking</h3>
+                    <p class="text-slate-400 text-sm mb-4 leading-relaxed">Specializing in high-volume financial reconciliation and secure, role-based reporting. Transforming fragmented banking data into audit-ready intelligence using Power BI & SSRS.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-[10px] bg-slate-800 border border-slate-700 px-2 py-1 rounded text-emerald-400">Financial Integrity</span>
+                        <span class="text-[10px] bg-slate-800 border border-slate-700 px-2 py-1 rounded text-emerald-400">RLS Security</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="expertise" class="py-20">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-4xl font-bold mb-8">Why TOT <span class="text-blue-500">GLOBAL?</span></h2>
+                <ul class="space-y-6">
+                    <li class="flex items-start">
+                        <div class="h-8 w-8 bg-blue-600/20 text-blue-500 rounded-lg flex items-center justify-center mr-4 mt-1 flex-shrink-0"><i class="fas fa-shield-alt"></i></div>
+                        <div>
+                            <h4 class="font-bold text-lg">Governance-First Approach</h4>
+                            <p class="text-slate-400 text-sm">Strict implementation of Row-Level Security (RLS) and RBAC for regulatory and government compliance.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <div class="h-8 w-8 bg-blue-600/20 text-blue-500 rounded-lg flex items-center justify-center mr-4 mt-1 flex-shrink-0"><i class="fas fa-bolt"></i></div>
+                        <div>
+                            <h4 class="font-bold text-lg">Performance Optimization</h4>
+                            <p class="text-slate-400 text-sm">Refining complex DAX and SQL to speed up query execution, ensuring dashboards load in under 2 seconds for massive datasets.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="bg-slate-800/50 p-8 rounded-3xl border border-slate-700 shadow-2xl">
+                <h4 class="text-center text-sm uppercase tracking-widest text-slate-500 mb-8 font-bold">Primary Tech Stack</h4>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-4 text-center">
+                    <div class="p-3 bg-slate-900 rounded-xl border border-slate-700 text-xs font-bold hover:border-blue-500 transition">AZURE</div>
+                    <div class="p-3 bg-slate-900 rounded-xl border border-slate-700 text-xs font-bold hover:border-blue-500 transition">POWER BI</div>
+                    <div class="p-3 bg-slate-900 rounded-xl border border-slate-700 text-xs font-bold hover:border-blue-500 transition">SQL SERVER</div>
+                    <div class="p-3 bg-slate-900 rounded-xl border border-slate-700 text-xs font-bold hover:border-blue-500 transition">SSRS</div>
+                    <div class="p-3 bg-slate-900 rounded-xl border border-slate-700 text-xs font-bold hover:border-blue-500 transition">PYTHON</div>
+                    <div class="p-3 bg-slate-900 rounded-xl border border-slate-700 text-xs font-bold hover:border-blue-500 transition">QLIK</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="py-20 border-t border-slate-800 text-center">
+        <img src="logo.jpg" alt="TOT GLOBAL" class="h-12 w-12 rounded-full mx-auto mb-6 opacity-80 grayscale hover:grayscale-0 transition">
+        <h3 class="text-2xl font-bold mb-4">Ready to unlock your data's potential?</h3>
+        <p class="text-slate-400 mb-8 max-w-md mx-auto">Based in Kelvin Grove, Brisbane. Partnering with enterprise clients across ANZ to drive intelligence through data.</p>
+        <a href="mailto:info@totglobal.com.au" class="px-10 py-4 bg-white text-slate-900 font-bold rounded-full hover:bg-blue-600 hover:text-white transition-all shadow-xl">Contact Us</a>
+        <div class="mt-16 text-slate-600 text-[10px] uppercase tracking-widest">
+            &copy; 2026 TOT GLOBAL PTY LTD | ACN 678 141 876 | Brisbane, Australia
+        </div>
+    </footer>
 
 </body>
-
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
